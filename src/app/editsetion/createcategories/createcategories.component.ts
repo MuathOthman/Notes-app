@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NotesService} from "../../notes.service";
 
 @Component({
   selector: 'app-createcategories',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./createcategories.component.css']
 })
 export class CreatecategoriesComponent {
+  constructor(private notes: NotesService) {}
+
+  description(data:any){
+    const found = this.notes.categories.findIndex(item => item.name === this.notes.selectedNote)
+    console.log(found)
+  }
 
 }

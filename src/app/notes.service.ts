@@ -9,10 +9,10 @@ export class NotesService{
 
   constructor() { }
 
-  private categories: CategoriesModel[] = []
+  public categories: CategoriesModel[] = []
 
   getCategories(){
-    return this.categories.slice();
+    return this.categories;
   }
 
 }
