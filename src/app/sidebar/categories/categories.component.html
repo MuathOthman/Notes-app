@@ -1,0 +1,11 @@
+<br>
+<br>
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Add Note" #data>
+  <div class="input-group-append">
+    <button class="btn btn-primary" (click)="button(data.value)">+</button>
+  </div>
+</div>
+<ul class="list-group">
+  <li class="link-primary list-group-item" *ngFor="let i of list"><a href="#" (click)="selectedOne(i)">{{ i }}</a></li>
+</ul>

@@ -1,0 +1,16 @@
+*{
+  margin-left: 250px; /* Adjust the value to match the width of your sidebar */
+  padding: 20px;
+}
+
+h1{
+  font-size: 90px;
+  font-weight: bold;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  margin-right: 50rem;
+}
