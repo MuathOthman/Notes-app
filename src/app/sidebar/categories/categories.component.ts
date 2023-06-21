@@ -10,6 +10,7 @@ import {CategoriesModel} from "../../Shared/categories.model";
 export class CategoriesComponent {
   @Input() note!: CategoriesModel;
 
+
   constructor(private categoriesList: NotesService) {}
 
   list = this.categoriesList.getCategories()
@@ -17,7 +18,7 @@ export class CategoriesComponent {
 
   button(value:any){
     console.log(value)
-    this.list.push(value)
+    this.list.push(new CategoriesModel(value, ''))
     console.log(this.list)
   }
 

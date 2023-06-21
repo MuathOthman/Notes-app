@@ -5,11 +5,14 @@ import {CategoriesModel} from "./Shared/categories.model";
   providedIn: 'root'
 })
 export class NotesService{
+  selectedNoteValue!: CategoriesModel;
   selectedNote = new EventEmitter<CategoriesModel>();
 
   constructor() { }
 
-  public categories: CategoriesModel[] = []
+  public categories: CategoriesModel[] = [
+    new CategoriesModel('Jordan🇯🇴', 'habibi')
+  ]
 
   getCategories(){
     return this.categories;

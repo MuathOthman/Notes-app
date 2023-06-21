@@ -7,11 +7,30 @@ import {NotesService} from "../../notes.service";
   styleUrls: ['./createcategories.component.css']
 })
 export class CreatecategoriesComponent {
-  constructor(private notes: NotesService) {}
+  editMode: boolean = false;
+  constructor(public notes: NotesService) {}
+
+  list = this.notes.categories
+
+  enableEdit(){
+    this.editMode = true;
+  }
 
   description(data:any){
-    const found = this.notes.categories.findIndex(item => item.name === this.notes.selectedNote)
-    console.log(found)
+    this.editMode = false;
+    const found:number = this.list.indexOf(this.notes.selectedNoteValue)
+    console.log('SelectedNote: ' + this.notes.selectedNoteValue)
+    console.log('Index number: ' + found)
+    console.log(this.notes.categories)
+    //this.list[found] = {
+    //  name:'',
+    //  description: data
+    //}
+    this.notes.categories[found] = {
+      name: this.notes.selectedNoteValue.name,
+      description: data
+    }
+
   }
 
 }

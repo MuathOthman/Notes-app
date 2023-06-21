@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {NotesService} from "../notes.service";
 import {CategoriesModel} from "../Shared/categories.model";
 
@@ -9,11 +9,12 @@ import {CategoriesModel} from "../Shared/categories.model";
 })
 export class EditsetionComponent implements OnInit{
   selectedNotes!: CategoriesModel;
-  constructor(private categoriesList: NotesService) {}
+  constructor(public categoriesList: NotesService) {}
 
   ngOnInit() {
     this.categoriesList.selectedNote.subscribe((notes: CategoriesModel) => {
       this.selectedNotes = notes;
+      this.categoriesList.selectedNoteValue = notes;
       console.log(notes)
     });
   }

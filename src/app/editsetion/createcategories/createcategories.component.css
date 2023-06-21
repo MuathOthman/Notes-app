@@ -2,4 +2,7 @@
   margin-left: 92px; /* Adjust the value to match the width of your sidebar */
   margin-top: -20px;
 }
-
+button{
+  margin-right: -80px;
+  color: white;
+}
