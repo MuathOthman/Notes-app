@@ -24,6 +24,11 @@ export class CategoriesComponent {
 
   selectedOne(data:CategoriesModel){
     this.categoriesList.selectedNote.emit(data)
+    const found:number = this.list.indexOf(this.categoriesList.selectedNoteValue)
+    console.log('SelectedNote: ' + this.categoriesList.selectedNoteValue)
+    console.log('Index number: ' + found)
+    console.log(this.categoriesList.categories)
+    this.categoriesList.index = found
   }
 
 }

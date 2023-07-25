@@ -1,7 +1,7 @@
 <form>
 <div class="form-group">
   <label for="exampleFormControlTextarea1"></label>
-  <textarea  class="w-75 form-control" id="exampleFormControlTextarea1" rows="20" #data [disabled]="!editMode">{{ notes.selectedNoteValue.description }}</textarea>
+  <textarea  class="w-75 form-control" id="exampleFormControlTextarea1" rows="20" #data [disabled]="!editMode">{{ list[notes.index].description }}</textarea>
   <br>
   <button type="button" class="btn btn-success" (click)="description(data.value)">Save</button>
   <button type="button" class="btn btn-warning" (click)="enableEdit()">Edit</button>

@@ -9,6 +9,7 @@ import { TextboxComponent } from './textbox/textbox.component';
 import { CategoriesComponent } from './sidebar/categories/categories.component';
 import {NotesService} from "./notes.service";
 import { CreatecategoriesComponent } from './editsetion/createcategories/createcategories.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CreatecategoriesComponent } from './editsetion/createcategories/createc
     TextboxComponent,
     CategoriesComponent,
     CreatecategoriesComponent,
+    WelcomeComponent,
   ],
   imports: [
     BrowserModule
